@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTheme"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="🌓 Theme"
+        android:textColor="@color/display_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="bottom|end"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/expression_text"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="@color/display_text"
+            android:textSize="56sp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="28sp"
+            android:autoSizeMaxTextSize="56sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/CalcRow">
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Clear" android:text="C" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="⌫" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="%" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="÷" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/CalcRow">
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="7" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="8" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="9" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="×" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/CalcRow">
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="4" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="5" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="6" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="−" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/CalcRow">
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="1" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="2" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="3" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Op" android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/CalcRow">
+            <com.google.android.material.button.MaterialButton
+                style="@style/CalcBtn"
+                android:layout_weight="2"
+                android:text="0" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn" android:text="." />
+            <com.google.android.material.button.MaterialButton style="@style/CalcBtn.Equals" android:text="=" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

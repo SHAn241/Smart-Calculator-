@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- One row of buttons -->
+    <style name="CalcRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- Number button (base style) -->
+    <style name="CalcBtn" parent="Widget.Material3.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="backgroundTint">@color/btn_number</item>
+        <item name="android:textColor">@color/btn_number_text</item>
+    </style>
+
+    <!-- Operator buttons -->
+    <style name="CalcBtn.Op">
+        <item name="backgroundTint">@color/btn_op</item>
+        <item name="android:textColor">@color/btn_op_text</item>
+    </style>
+
+    <!-- Clear button -->
+    <style name="CalcBtn.Clear">
+        <item name="backgroundTint">@color/btn_clear</item>
+        <item name="android:textColor">@color/btn_op_text</item>
+    </style>
+
+    <!-- Equals button -->
+    <style name="CalcBtn.Equals">
+        <item name="backgroundTint">@color/btn_equals</item>
+        <item name="android:textColor">@color/btn_op_text</item>
+    </style>
+</resources>
